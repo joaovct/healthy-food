@@ -43,6 +43,7 @@ const Header = (props: {showBackground?: boolean}) => {
                 window.removeEventListener('scroll', handleScroll)
             }
         }
+    //eslint-disable-next-line
     },[])
 
     return(

@@ -80,7 +80,7 @@ export const card = {
     }
 }
 
-export default {
+const exportDefault = {
     spacing,
     fontSpacing,
     fontFamily,
@@ -93,3 +93,5 @@ export default {
     card,
     effects
 }
+
+export default exportDefault

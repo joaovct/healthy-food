@@ -22,7 +22,7 @@ export const card = {
     }
 }
 
-export default {
+const exportDefault = {
     primary,
     secondary,
     white,
@@ -32,3 +32,5 @@ export default {
     background,
     card
 }
+
+export default exportDefault

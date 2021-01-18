@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import colors from '../../../../styles/colors'
 import metrics from '../../../../styles/metrics'

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import Button from "../../elements/Button/Button"
 import container from "../../elements/Container/Container"
 import Input from "../../elements/Form/Input/Input"
@@ -26,7 +26,7 @@ const Register = () => {
     const stateRef = useRef<HTMLInputElement>(null)
     const [,setUpdate] = useState(0)
 
-    function searchCep(){
+    const searchCep = useCallback(() => {
         if(cep){
             fetch('https://brasilapi.com.br/api/cep/v1/'+cep)
             .then(response => response.json().then(response => {
@@ -52,7 +52,7 @@ const Register = () => {
                 setError('Ocorreu um erro ao procurar pelo CEP.')
             })
         }
-    }
+    },[cep])
 
     function clickSubmit(){
         if(nameRef?.current?.value && dateRef?.current?.value && cpfRef?.current?.value && cep && streetRef?.current?.value &&
@@ -84,7 +84,7 @@ const Register = () => {
             clearTimeout(timeout)
 
         timeout = setTimeout(searchCep, 750)
-    },[cep])
+    },[cep, searchCep])
 
     useEffect(() => {
         if(success || error){

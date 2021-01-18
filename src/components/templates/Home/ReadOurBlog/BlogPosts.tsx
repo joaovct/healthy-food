@@ -42,7 +42,7 @@ const BlogPosts = () => {
                     >
                         <Subtitle>Quick-start guide <br/> to nuts and seeds</Subtitle>
                         <Author>
-                            <img src={author1}/>
+                            <img src={author1} alt="Author"/>
                             <span>Kevin Ibrahim</span>
                         </Author>
                     </Card>
@@ -57,7 +57,7 @@ const BlogPosts = () => {
                     >
                         <Subtitle>Nutrition: Tips for <br/> Improving Your Health</Subtitle>
                         <Author>
-                            <img src={author2}/>
+                            <img src={author2} alt="Author"/>
                             <span>Kevin Ibrahim</span>
                         </Author>
                     </Card>
@@ -72,7 +72,7 @@ const BlogPosts = () => {
                     >
                         <Subtitle>The top 10 benefits <br/> of eating healthy</Subtitle>
                         <Author>
-                            <img src={author3}/>
+                            <img src={author3} alt="Author"/>
                             <span>Kevin Ibrahim</span>
                         </Author>
                     </Card>
@@ -87,7 +87,7 @@ const BlogPosts = () => {
                     >
                         <Subtitle>What Makes a <br/>Healthy Diet?</Subtitle>
                         <Author>
-                            <img src={author4}/>
+                            <img src={author4} alt="Author"/>
                             <span>Kevin Ibrahim</span>
                         </Author>
                     </Card>

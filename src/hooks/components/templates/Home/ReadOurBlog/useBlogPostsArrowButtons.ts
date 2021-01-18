@@ -39,7 +39,7 @@ const useBlogPostsArrowButtons: Hook = ({cardGap, cardWidth}) => {
         }
     }
 
-    useEffect(manageArrowsState,[innerPostsRef])
+    useEffect(manageArrowsState,[innerPostsRef, cardGap])
 
     return {
         showArrows,

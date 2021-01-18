@@ -22,4 +22,6 @@ export const xlp = `${absoluteDimensions.xlp}px`
 export const dp = `${absoluteDimensions.dp}px`
 export const xdp = `${absoluteDimensions.xdp}px`
 
-export default {absoluteDimensions, smp, sml, tbp, tbl, lg, xlg, lp, xlp, dp, xdp}
+const exportDefault = {absoluteDimensions, smp, sml, tbp, tbl, lg, xlg, lp, xlp, dp, xdp}
+
+export default exportDefault
