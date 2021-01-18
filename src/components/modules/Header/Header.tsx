@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import container from '../../elements/Container/Container'
@@ -11,11 +11,12 @@ import {ReactComponent as Close} from '../../../assets/images/svg/icons/close.sv
 import {ReactComponent as Menu} from '../../../assets/images/svg/icons/menu.svg'
 
 const Header = (props: {showBackground?: boolean}) => {
+    console.log(props.showBackground)
     const headerRef = useRef<HTMLDivElement>(null)
     const [showBackground, setShowBackground] = useState(props.showBackground ? true : false)
     const [showMenu, setShowMenu] = useState(false)
 
-    const handleScroll = () => {
+    const handleScroll = useCallback(() => {
         if(window.innerWidth > 950){
             if(headerRef.current && window.scrollY > headerRef.current?.getBoundingClientRect().bottom)
                 setShowBackground(true)
@@ -23,7 +24,7 @@ const Header = (props: {showBackground?: boolean}) => {
                 setShowBackground(false)
         }else
             handleResize()
-    }
+    },[])
 
     const handleResize = () => {
         if(window.innerWidth <= 950)
@@ -42,9 +43,10 @@ const Header = (props: {showBackground?: boolean}) => {
                 window.removeEventListener('resize', handleResize)
                 window.removeEventListener('scroll', handleScroll)
             }
+        }else if(props.showBackground === true){
+            setShowBackground(props.showBackground)
         }
-    //eslint-disable-next-line
-    },[])
+    },[handleScroll, props])
 
     return(
         <>
