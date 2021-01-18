@@ -11,7 +11,7 @@ import BlogPosts from './BlogPosts'
 const ReadOurBlog = () => {
     return(
         <>
-            <Page id="read-our-blog">
+            <Page id="our-blog">
                 <Container>
                     <Subtitle>Read Our Blog</Subtitle>
                     <Paragraph>
