@@ -3,7 +3,7 @@
 
 # Healthy Food
 
-### Fictional website. Live [here](https://healthyfood.vercel.app/).
+### Fictional website. Live [here](https://healthy-food-git-main.joaodjtr.vercel.app/).
 
 # Layout
 This design wasn't made by me. I just code it to web.
