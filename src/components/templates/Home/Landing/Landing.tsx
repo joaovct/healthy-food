@@ -238,7 +238,6 @@ const Container = styled(container)`
 const Page = styled(page)`
     position: relative;
     padding-top: 0;
-    padding-bottom: 0;
 
     @media(max-width: 950px){
         flex: inherit;
